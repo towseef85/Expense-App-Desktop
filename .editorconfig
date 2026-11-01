@@ -23,3 +23,9 @@ dotnet_style_qualification_for_event = false:warning
 [*.{json,md,yml,yaml}]
 indent_style = space
 indent_size = 2
+
+[**/Migrations/*.cs]
+charset = utf-8-bom
+end_of_line = crlf
+dotnet_diagnostic.IDE0161.severity = none
+dotnet_diagnostic.CA1861.severity = none

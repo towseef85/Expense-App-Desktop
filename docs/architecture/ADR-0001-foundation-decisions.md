@@ -19,7 +19,7 @@ The approved representation is an immutable currency-aware value object with int
 
 ### SQLite and Entity Framework Core
 
-Use EF Core 10 with SQLite for local persistence. The context shell exists only to establish the boundary. The financial model and first migration are deferred until the domain model is reviewed, avoiding an accidental schema commitment. Production code will use migrations, never `EnsureCreated`.
+Use EF Core 10 with SQLite for local persistence. Milestone 3 introduced the first forward migration after the financial domain review. Infrastructure persistence records keep EF Core concerns outside the domain. Production code uses migrations, never `EnsureCreated`.
 
 ### Offline-first storage
 

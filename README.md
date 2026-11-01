@@ -43,9 +43,14 @@ Logs are local structured JSON with rolling retention. Code must not log authent
 
 ## Database migrations
 
-The context shell deliberately has no financial entities or migration. The initial migration will be created in Milestone 3 after the Milestone 2 domain model is approved. Production startup must never use `EnsureCreated`.
+Milestone 3 adds the initial EF Core migration for currencies, accounts, categories, transactions, legs, and splits. Production code never uses `EnsureCreated`. Automatic startup migration is intentionally deferred until the pre-migration safety-backup workflow is available.
 
-Planned migration commands will use `BudgetManager.Infrastructure` as the migration project and `BudgetManager.App` as the startup project.
+```powershell
+dotnet tool restore
+dotnet tool run dotnet-ef database update --project src/BudgetManager.Infrastructure --startup-project src/BudgetManager.Infrastructure
+```
+
+Migration commands use `BudgetManager.Infrastructure` as both the migration project and design-time startup project. See [the schema documentation](docs/database/schema.md) for the current persisted model.
 
 ## Packaging direction
 
