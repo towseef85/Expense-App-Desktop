@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
+artifacts/
+AppPackages/
+*.pfx
+*.cer
+*.db
+*.db-shm
+*.db-wal
+logs/
