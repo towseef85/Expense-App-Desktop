@@ -1,6 +1,6 @@
 # Budget Manager
 
-Budget Manager is an offline-first Windows personal-finance application built with WinUI 3, .NET 10, EF Core, and SQLite. The repository currently contains Milestone 1 foundation code only. No financial behavior is implemented yet.
+Budget Manager is an offline-first Windows personal-finance application built with WinUI 3, .NET 10, EF Core, and SQLite. The repository currently contains the solution foundation and the Milestone 2 financial domain. Persistence and end-user ledger workflows are not implemented yet.
 
 ## Prerequisites
 
